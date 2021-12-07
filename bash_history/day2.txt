@@ -1,0 +1,451 @@
+systemctl status tuned
+tuned-adm status tuned
+tuned-adm status 
+tuned-adm status list
+tuned-adm active
+tuned-adm list
+tuned-adm profile powersave
+tuned-adm active
+tuned-adm profile_info powersave
+tuned-adm profile_info balanced
+tuned-adm profile_info virtual-host
+tuned-adm recommend 
+tuned-adm profile virtual-guest 
+tuned-adm off
+tuned-adm active
+systemctl status tuned
+tuned-adm profile virtual-guest 
+tuned-adm active
+tuned-adm 
+tuned-adm verify balanced
+tuned-adm verify 
+less /var/log/tuned/tuned.log
+chkconfig --list
+chkconfig 
+systemctl status tuned
+cd
+ls -la
+ls -li
+cat /proc/filesystems 
+df -hT
+clear
+ls -la
+touch softLink
+touch hardlink
+mv softLink softlink
+ls -la
+ls -la *link
+ls -li *link
+rm hardlink softlink 
+touch plik1 plik2
+vi plik1
+vi plik21
+vi plik2
+ls -la plik*
+rm plik
+ls -la plik*
+ln -s plik1 softlink
+ls -la
+vi plik1
+vi softlink 
+ls -li plik1
+ls -li softlink
+ln plik2 hardlink
+ls -li plik2
+ls -li hardlink 
+vi plik2
+vi hardlink 
+cat plik2
+ls -la
+rm plik1 -f
+ls -la softlink 
+vi softlink 
+rm -f plik2
+vi hardlink 
+ls -li hardlink 
+vi softlink 
+ls -la softlink 
+vi softlink 
+ls -la plik1 
+vi plik1
+ls -li plik1
+ls -li testDir*
+ls -li testDir1
+ls -li softlink 
+df -hT
+ls -li hardlink 
+vi 1048897
+ls -la plik
+ls -la plik2
+ln hardlink hradlink2
+ln hardlink hradlink3
+ln hardlink hradlink4
+ln hardlink hradlink5
+ls -li hardlink 
+find / -inum 1048897
+ls -li softlink plik1
+mv plik1 testDir1/
+ls -li softlink plik1
+vi testDir1/plik1 
+echo "cokolwiek tutaj wpisze to bedzie w pliku" > plik1
+ls -li softlink plik1
+ vi softlink 
+clear
+vi plik1 
+grep tut -n
+grep -n tut plik1
+clear
+cd /var/log
+ls -la
+systemd-analyze 
+systemd-analyze blame
+journalctl 
+journalctl /sbin/crond
+which sshd
+journalctl /usr/sbin/sshd
+journalctl --help
+journalctl -u crond
+journalctl -u sshd
+journalctl -b
+journalctl --since=today
+journalctl -p err
+journalctl -f
+ls -la /var/log/
+ls -la /var/log/journal
+mkkdir /var/log/journal
+mkdir /var/log/journal
+ls -la /var/log/journal
+vi /etc/systemd/journald.conf 
+ls -la /var/log/journal
+cd 7222932c08884c78930162b6efb54242
+cd journal/
+cd 7222932c08884c78930162b6efb54242/
+ls
+less system.journal 
+cd ..
+systemctl restart systemd-journald
+reboot
+journalctl 
+journalctl -b
+journalctl 
+journalctl -b
+journalctl -p err
+systemctl status kdump.service 
+cat /var/log/messages | grep -i kdump
+journalctl -u kdump
+clear
+cat /proc/partitions 
+blkid
+lsblk
+fdisk
+fdisk /dev/sdb
+cat /proc/partitions 
+gdisk /dev/sdb
+cat /proc/partitions 
+gdisk /dev/sdc
+cat /proc/partitions 
+lsblk
+blkid
+mkfs.ext4 /dev/sdb1
+mkfs.ext3 /dev/sdb2
+mkfs.xfs /dev/sdc1
+df -h
+mkdir /filesystemExt3
+mkdir /filesystemExt4
+mkdir /filesystemXfs
+mount /dev/sdb1 /filesystemExt3
+df -h
+mount /dev/sdb2 /filesystemExt4
+mount /dev/sdc1 /filesystemXfs/
+df -h
+blkid
+lsblk
+vi /etc/fstab 
+man fstab
+vi /etc/fstab 
+blkid
+vi /etc/fstab 
+e2label /dev/sdb2
+e2label /dev/sdb2 wwwRoot
+e2label /dev/sdb2
+vi /etc/fstab 
+df -hT
+umount /filesystemExt3
+df -hT
+cd /filesystemExt4
+ls
+touch plik1
+touch plik2
+mkdir test
+ls -la
+umount /filesystemExt4
+cd ..
+umount /filesystemExt4
+umount /filesystemXfs 
+df -h
+mount -a
+vi /etc/fstab 
+mount -a
+vi /etc/fstab 
+lsblk
+df -h
+df -hT
+vi /etc/fstab 
+umount /filesystem*
+df -h
+mount -a
+df -h
+df -hT
+lsblk\
+lsblk
+ip a 
+dnf install -y nfs-utils
+showmount --help
+showmount 192.168.1.81
+showmount -l  192.168.1.81
+man mount
+mount -t nfs 192.168.1.80:/home/nfs-share /mnt
+systemctl status firewalld.service 
+systemctl status nfs-client.target 
+systemctl status nfs-utils.service 
+systemctl start nfs-utils.service 
+systemctl status nfs-utils.service 
+mount -t nfs 192.168.1.80:/home/nfs-share /mnt
+df -h
+systemctl start nfs-server.service 
+df -h
+mount -t nfs 192.168.1.80:/home/nfs-share /mnt
+mkdir /nfs
+mount -t nfs 192.168.1.80:/home/nfs-share /nfs
+showmount -e 192.168.1.80
+mount -t nfs 192.168.1.81:/home/nfs-share /nfs
+df -hT
+cd /nfs
+ls -la
+rm test
+ls -la
+vi /etc/fstab 
+vi /etc/hosts
+ping centos7
+vi /etc/resolv.conf 
+cd
+df -h
+umount /nfs
+vi /etc/fstab 
+reboot
+df -h
+umount /filesystem*
+df -h
+vi /etc/fstab 
+mount -a
+df -h
+cat /proc/partitions 
+fdisk /dev/sdb
+partprobe
+df -h
+umount /filesystem*
+df -h
+partprobe 
+df -h
+mount -a
+df -h
+fdisk /dev/sdb
+wipefs /dev/sdb
+wipefs --help
+wipefs -a /dev/sdb
+partprobe 
+df -h
+pvcreate /dev/sdb
+pvs
+vgcreate vg1 /dev/sdb
+pvs
+vgs
+lvcreate -L 2G -n lv1 vg1
+lvs
+vgs
+pvs
+lvcreate -L 100M -n lv2 vg1
+lvs
+vgs
+pvs
+mkfs.ext4 /dev/vg1/lv1 
+mkfs.ext4 /dev/mapper/vg1-lv2 
+lvs
+cd /dev
+ls
+cd vg1
+ls -la
+cd lv1
+cd ../dm-0
+cd ..
+cd
+cat /proc/partitions 
+blkid
+lvdisplay 
+vgdisplay 
+pvdisplay 
+lvs
+mount /dev/mapper/vg1-lv1 /filesystemExt3/
+mount /dev/mapper/vg1-lv2 /filesystemExt4
+df -h
+reboot
+df -h
+lvs
+mount /dev/mapper/vg1-lv2 /filesystemExt3
+mount /dev/mapper/vg1-lv1 /filesystemExt4
+df -h
+blkid
+lvrename /dev/vg1/lv1 /dev/vg1/lvNew
+lvs
+ cd /filesystemExt3
+dd if=/dev/zero of=file1 bs=1024 count=70
+dd if=/dev/zero of=file1 bs=102400 count=70
+dd if=/dev/zero of=file1 bs=1024000 count=70
+df -h
+vgs
+lvextend -L +200M /dev/vg1/lv2
+lvs
+df -h
+resize2fs /dev/vg1/lv2
+df -h
+cd .
+cd 
+lvs
+lvrename /dev/vg1/lvNew /dev/vg1/lv1
+lvs
+vgs
+lvextend -L +100%FREE /dev/vg1/lv2
+lvextend --help
+man lvextend 
+lvextend -l +100%FREE /dev/vg1/lv2
+lvs
+vgs
+df -h
+cd /filesystemExt3
+dd if=/dev/zero of=file1 bs=1024000 count=190
+lvs
+df -h
+dd if=/dev/zero of=file1 bs=1024000 count=50
+df -h
+dd if=/dev/zero of=file1 bs=1024000 count=260
+df -h
+vgs
+gdisk /dev/sdc
+wipefs -a /dev/sdc
+df -h
+partprobe 
+cat /proc/partitions 
+pvcreate /dev/sdc 
+pvs
+vgs
+vgextend --help
+vgextend vg1 /dev/sdc
+df -h
+vgs
+vgreduce vg1 /dev/sdc
+vgs
+fdisk /dev/sdc
+cat /proc/partitions 
+pvcreate /dev/sdc1
+vgcreate vg_swap /dev/sdc1
+lvcreate -l 100%FREE -n lv_swap vg_swap
+lvs
+mkswap /dev/mapper/vg_swap-lv_swap
+swapon -s
+swapon /dev/mapper/vg_swap-lv_swap
+swapon -s
+swapoff /dev/sda2
+swapon -s
+swapon /dev/sda2
+swapon -s
+cat /proc/swaps 
+swapoff /dev/*
+swapon -s
+swapon -a
+swapon -s
+blkid
+blkid | grep swap
+dd if=/dev/zero of=swapfile1 bs=1024000 count=260
+df -h
+rm swapfile1 
+dd if=/dev/zero of=/filesystemExt4/swapfile1 bs=1024000 count=260
+cd ../filesystemExt4
+ls -la
+mkswap swapfile1 
+swapon swapfile1
+chmod 600 swapfile1 
+swapon swapfile1
+swapon -s
+df -h
+df -hT
+dumpe2fs /dev/mapper/vg1-lv2
+fsck.ext4 /dev/mapper/vg1-lv2
+df -h
+umount/filesystemExt3
+umount /filesystemExt3
+fsck.ext4 /dev/mapper/vg1-lv2
+man fsck
+fsck.ext4 -lrV /dev/mapper/vg1-lv2
+fsck.ext4 -V /dev/mapper/vg1-lv2
+fsck.ext4 -r /dev/mapper/vg1-lv2
+e4defrag --help 
+e4defrag -c /var/log
+e4defrag -c /
+cd
+df -h
+mount -o remount,ro /filesystemExt4
+mount -o remount,ro /filesystemExt3
+mount /filesystemExt3
+mount /dev/mapper/vg1-lv2 /filesystemExt3
+mount -o remount,ro /filesystemExt3
+df -h
+cd /filesystemExt3/
+ls -la
+touch plik2
+cd
+mount -o remount,rw /filesystemExt3
+cd /filesystemExt3
+touch plik2
+cd
+grep -i config_dm_crypt /boot/config-4.18.0-240.22.1.el8_3.x86_64 
+lsmod | grep -i dm_crupt
+lsmod | grep -i dm_crypt
+modprobe dm_crypt
+lsmod | grep -i dm_crypt
+lvs
+df -h
+umount /filesystemExt3
+umount /filesystemExt4
+df -h
+dnf install cryptsetup
+cryptsetup -y luksFormat /dev/mapper/vg1-lv2
+cryptsetup luksOpen /dev/mapper/vg1-lv2 my_encrypted_partition
+mkfs.ext4 /dev/mapper/my_encrypted_partition 
+mount /dev/mapper/my_encrypted_partition /mnt
+df -h
+cd /mnt
+ls -la
+touch plikSecure
+touch plicConfidential
+mkdir pentagon
+ls -la
+cd ..
+cryptsetup luksClose my_encrypted_partition 
+cd
+cryptsetup luksClose my_encrypted_partition 
+df -h
+umount /mnt
+cryptsetup luksClose my_encrypted_partition 
+df -h
+cryptsetup luksOpen  /dev/mapper/vg1-lv2
+cryptsetup luksOpen  /dev/mapper/vg1-lv2 mySecurePartition
+mount /dev/mapper/mySecurePartition /mnt
+cd /mnt
+ls -la
+touch plikSecure2
+ls -la
+cd 
+umount /mnt
+cryptsetup luksClose mySecurePartition 
+df -h
+lvcreate --help
