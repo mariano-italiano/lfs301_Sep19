@@ -1,0 +1,421 @@
+sysctl -a | grep -i kernel
+sysctl -a | grep -i ip_forward
+sysctl -a | grep -i icmp
+sysctl -a | grep -i hugepages
+sysctl -a | grep -i swapp
+sysctl -a | less
+echo "1" > /proc/sys/net/ipv4/ip_forward
+sysctl -a | grep -i ip_forward
+vi /etc/sysctl.conf 
+lsmod | grep -i crypt
+modprobe dm_crypt
+lsmod | grep -i crypt
+insmod --help
+lsmod | grep -i vmxnet
+lsmod vmxnet3
+modinfo vmxnet3
+cd /lib/modules/4.18.0-240.22.1.el8_3.x86_64/kernel/drivers/
+ls -la
+cd crypto
+ls -l
+cd ../usb
+ls -la
+modinfo e1000
+lsmod
+lsmod --help
+cd /lib/modules
+ls
+uname -r
+cd 4.18.0-240.22.1.el8_3.x86_64
+ls 
+find . -type f  -name "*.ko*"
+clear
+cd
+clear
+lsmod | grep -i ip_forward
+sysctl -a  | grep -i ip_forward
+cat /proc/sys/net/ipv4/ip_forward
+vi /etc/sysctl.conf 
+sysctl -p
+cat /proc/sys/net/ipv4/ip_forward
+vi /proc/sys/net/ipv4/ip_forward
+echo "1" > /proc/sys/net/ipv4/ip_forward
+cat /proc/sys/net/ipv4/ip_forward
+sysctl -p
+cat /proc/sys/net/ipv4/ip_forward
+vi /etc/sysctl.conf 
+ls -la /proc/sys/net/ipv4/ip_forward\
+ls -la /proc/sys/net/ipv4/ip_forward
+vi /proc/sys/net/ipv4/ip_forward
+clear
+ls -la /etc/passwd
+ls -la /etc/shadow
+vi /etc/default/
+vi /etc/default/useradd 
+vi /etc/default/usermod
+id student
+su - student
+su student
+cat /etc/passwd | grep -i www
+cat /etc/passwd | grep -i /var
+cat /etc/passwd | grep -i http
+cat /etc/passwd | gre
+cat /etc/shadow | grep student
+cat /etc/passwd
+cat /etc/shadow
+passwd student
+cat /etc/shadow | grep -i student
+passwd student
+clear
+useradd --help\
+useradd --help
+useradd test
+cat /etc/passwd
+id test
+cat /etc/group
+useradd -g 1001 -G ftp -d /home/testuser -c "Test User" -s /bin/sh -u 1010 testuser
+cat /etc/passwd
+id testuser
+usermod --help
+usermod -s /bin/bash -u 1002 testuser 
+id testuser
+vi /etc/group
+id testuser
+vi /etc/group
+id testuser
+usermod -G sshd testuser
+id testuser
+usermod -aG wheel testuser
+id testuser
+userdel -r testuser
+cd /hom
+cd /home
+ls -la
+passwd test
+passwd -l student
+passwd -u student
+passwd -l test
+passwd -u test
+groupadd marketing
+groupadd finanse
+cat /etc/gro
+cat /etc/grop
+cat /etc/group
+groupmod -g 1005 -n ksiegowosc finanse 
+cat /etc/group
+groupadd finanse
+cat /etc/group
+chage -l student
+chage --help
+chage -h
+man change
+man chage
+chage -M 10 student
+chage -l student
+chage -m 0 -M 99999 -I -1 -E -1 student
+chage -l student
+cd
+whoami
+su - student
+visudo
+vi /etc/sudoers
+man sudo
+visudo
+vi /etc/sudoers.d/student 
+cat /etc/passwd
+id test
+visudo
+su -test
+su - test
+visudo
+passwd test
+visudo
+vi /etc/sudoers.d/user
+usermod -g student test
+su - test
+usermod -g test test
+su - test
+ps -ef | grep -i sshd
+ssh test@localhost
+useradd test2
+ssh test2@localhost
+clear
+ls -la 
+su - student
+ls -la
+chmod 600 plik1 
+ls -la plik1
+vi plik1 
+su - student
+ls -la /root
+chmod 551 /root
+su - student
+chmod 604 plik1
+su - student
+touch plik
+ls -la plik
+vi /etc/profile
+umask
+ls -la /tmp
+mkdir /testSticky
+chmod 1755 /testSticky
+ls -la /testSticky
+chmod 1750 /testSticky
+ls -la /testSticky
+chmod 1755 /testSticky
+ls -la /testSticky
+su - student
+ls -la /testSticky/
+chmod 1777 /testSticky
+su - student
+usermod -g finanse test
+usermod -g marketing test2
+id test
+id test2
+mkdir /finanse /marketing
+chmod 2777 /marketing
+chmod 2777 /finanse
+ls -la /marketing/
+ls -la /finanse/
+su - test
+chown finanse:finanse /finanse/
+chown root:finanse /finanse/
+chown root:marketing /marketing/
+su - test
+chmod 1770 /marketing/
+chmod 1770 /finanse/
+su - test
+chmod 2770 /marketing/
+chmod 2770 /finanse/
+su - test
+getfacl /home/student/plik
+getfacl /home/student/plik1
+getfacl /home/student/
+su - test
+setfacl -m g:finanse:rwx /home/student/
+getfacl /home/student/
+nmcli connection show
+nmcli connection up Intenret
+nmcli connection up Internet 
+nmcli connection show
+ip a s
+ping wp.pl
+vi /etc/resolv.conf 
+ping wp.pl
+nmcli connection down Internet 
+nmcli connection up ens160 
+ip a s
+nmcli connection modify Internet ipv4.dns 192.168.1.1
+nmcli connection show
+nmcli connection down ens160;nmcli connection up Internet
+ping wp.pl
+vi /etc/resolv.conf 
+nmcli connection modify Internet ipv4.dns 192.168.1.2
+nmcli connection down Internet ; nmcli connection up Internet 
+vi /etc/resolv.conf 
+nmcli c e Internet 
+nmcli connection show 
+vi /etc/resolv.conf 
+history
+cat /root/.nmcli-history 
+nmcli connection show 
+nmcli connection down Internet ; nmcli connection up ens160 
+nmcli connection show 
+nmcli connection delete Internet
+nmcli connection show 
+init 3
+init 5
+su - test
+getfacl /home/student
+ls -la /home/student/plik
+ls -la /home/student
+setfacl -m u:test: /home/student/plik
+setfacl -m u:test:--- /home/student/plik
+getfacl /home/student/
+getfacl /home/student/plik
+su - test
+setfacl -m g:finanse:x /home/student/
+su - test
+setfacl -x u:test /home/student/plik
+setfacl -x g:finanse /home/student
+getfacl  /home/student
+clear
+ip a s
+ip address show 
+ip address add 10.10.10.10/24 dev ens160
+ip 
+ip as
+ip a s
+ping 10.10.10.10
+ifconfig 
+ip link set ens160 down;ip link set ens160 up
+ip a s
+ip route show
+ip r s
+ip route add 10.10.10.0/24 via 172.16.1.1
+ip route add 10.10.10.0/24 via 192.168.1.1
+ip r s
+ip route add 10.10.10.0/24 via 10.10.10.1
+ip r s
+ip route add 172.16.24.0/24 via 192.168.1.5
+ip r s
+ip route del 172.16.24.0/24
+ip r s
+nmcli connection show
+nmcli device status
+nmcli device show
+nmcli connection add con-name Internet ifname ens160 type ethernet ip4 192.168.1.100/24 gw4 192.168.1.1
+nmcli device status
+nmcli connection show 
+nmtui-edit 
+nmcli connection show
+cat /root/.nmcli-history 
+nmtui-edit 
+vi /etc/resolv.conf 
+traceroute wp.pl
+traceroute wp.pl -I
+traceroute --help
+traceroute wp.pl -I
+nslookup 
+nslookup wp.pl
+dig -t mx wp.pl
+dig -t ns wp.pl
+hostname
+hostname -f
+hostnamectl set-hostname moj-serwer8
+hostname
+systemctl restart network-online.target 
+systemctl restart netwo
+systemctl restart network
+su - student
+vi /etc/hostname 
+vi /etc/hosts
+hostnamectl set-hostname centos8
+cat /etc/host
+cat /etc/hostname 
+systemctl status firewalld.service 
+systemctl start firewalld.service 
+systemctl status firewalld.service 
+firewall-cmd --list-all
+systemctl status httpd.service 
+systemctl start httpd.service 
+journalctl -xe
+systemctl status httpd.service 
+systemctl stop httpd
+vi /etc/ssh/sshd_config 
+systemctl restart sshd
+netstat -vatnulp | grep -i ssh
+firewall-cmd --list-all
+less /var/log/messages
+less /var/log/secure
+firewall-cmd --get-zone
+firewall-cmd --get-zones
+firewall-cmd --zone=trusted --list-all 
+firewall-cmd --zone=work --list-all 
+firewall-cmd --get-active-zones 
+firewall-cmd --state
+firewall-cmd --new-zone servers
+firewall-cmd --new-zone servers --permanent 
+firewall-cmd --zone=servers --list-all 
+firewall-cmd --reload 
+firewall-cmd --zone=servers --list-all 
+firewall-cmd --add-port=2222/tcp --permanent 
+firewall-cmd --reload 
+firewall-cmd --add-service=ssh --permanent 
+firewall-cmd --add-service=https --permanent 
+firewall-cmd --reload 
+firewall-cmd --zone=servers --list-all 
+firewall-cmd --add-service=https --zone=servers --permanent
+firewall-cmd --add-service=ssh --zone=servers --permanent
+firewall-cmd --add-port=2222/tcp --zone=servers --permanent
+firewall-cmd --reload 
+firewall-cmd --zone=servers --list-all 
+firewall-cmd --change-interface=lo --zone=servers --permanent
+firewall-cmd --reload 
+firewall-cmd --zone=servers --list-all 
+firewall-cmd --get-active-zones 
+firewall-cmd --remove-service=ssh  --zone=servers --permanent
+firewall-cmd --reload 
+firewall-cmd --zone=servers --list-all 
+firewall-cmd --change-interface=ens160 --zone=servers --permanent
+firewall-cmd --get-active-zones 
+man nmap
+nmap -sV localhost
+nmap  localhost
+crontab -l
+crontab -l student
+crontab -l 
+df -h
+ls -la
+vi loop.sh
+./loop.sh 
+ls -la
+vi loop.sh
+./loop.sh 
+ls -la
+date
+vi loop.sh 
+./loop.sh 
+vi plik1
+crontab -e
+dagte
+date
+tail -f plik1 
+crontab -e
+crontab -u student -e
+crontab -e
+which cp\
+which cp
+crontab -e
+tail -f plik1 
+ls -la /tmp/loop*
+date
+ls -la /tmp/loop*
+cd /var/log/
+ls
+less cron
+date
+date +%d-%M-%y
+date +%D-%M-%Y
+date +%d-%m-%y
+date +%d-%m-%yyyy
+date +%H:%M:%S
+hwclock -s
+date
+hwclock 
+timedatectl set-time 2021-12-10
+timedatectl set-ntp yes
+timedatectl 
+timedatectl set-timezone America/New_York 
+timedatectl 
+timedatectl set-ntp yes
+dnf install chronyd
+dnf install chrony
+vi /etc/chrony.conf 
+chronyc sources
+systemctl stop firewalld.service 
+timedatectl 
+cat /etc/services | grep -i n tp
+cat /etc/services | grep -i ntp
+hwclock --help
+chronyc sources\
+chronyc sources
+vi /etc/chrony.conf 
+ping 0.pl.pool.ntp.org
+systemctl retart chronyd
+systemctl restart chronyd
+chronyc sources
+init 6
+systemctl isolate multi-user.target 
+ls -la /lib/systemd/system/runlevel*
+systemctl list-units --type target
+systemctl list-units --type target --all
+systemctl get-default 
+systemctl set-default multi-user.target 
+systemctl isolate graphical.target 
+init 5
+passwd 
+history
+cd /root/lfs301_Dec/bash_history
+git pull
+history | grep 585 -A 750 | cut -c 8- > /root/lfs301_Dec/bash_history/day3.txt
