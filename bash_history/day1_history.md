@@ -1,3 +1,4 @@
+```
 cd /tmp
 ls
 ls -l
@@ -436,3 +437,4 @@ mkdir bash_history
 cd bash_history
 history
 history | awk '$1 > 780' | cut -c 8- > day1_history.md
+```
