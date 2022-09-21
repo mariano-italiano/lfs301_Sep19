@@ -525,6 +525,5 @@ firewall-cmd --change-interface=ens160 --zone webservers --permanent
 firewall-cmd --list-all
 firewall-cmd --get-active-zones 
 history
-history | awk '$1 > 802' | cut -c 8- >> lfs301_Sep19/bash_history/day3_history.md
 cd
 history | awk '$1 > 802' | cut -c 8- >> lfs301_Sep19/bash_history/day3_history.md
